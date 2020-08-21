@@ -1,5 +1,5 @@
 class Jugador{
-  PImage []imagenes= new PImage[2];
+  PImage []imagenes= new PImage[3];
   float x;
   float y;
   int frame;
@@ -9,7 +9,7 @@ class Jugador{
     y=tempY;
     frame=0;
     for(int i=0; i< imagenes.length; i++){
-      String nombreImagen = "jugador" + i +".png";
+      String nombreImagen = "Jugador" + i +".png";
       imagenes[i]= loadImage(nombreImagen);
     }
   }
@@ -29,6 +29,7 @@ class Jugador{
       if(keyCode == UP){
         if(y>=0){ //si está lejos del limite superior de la pantalla puede moverse hacia arriba
             y -=2;
+            frame=2;
         }
       }
       if(keyCode == DOWN){
@@ -54,7 +55,7 @@ class Jugador{
    
   
   void display(){
-    image(imagenes[0], x,y);
+    image(imagenes[frame], x,y);
     atacar();
     mover();
   }

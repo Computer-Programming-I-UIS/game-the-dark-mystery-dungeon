@@ -15,6 +15,7 @@ class Enemigo{
   }
   
   
+  
   void display(){
     image(imagenes[0], x,y);
     
