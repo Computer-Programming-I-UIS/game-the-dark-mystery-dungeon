@@ -19,11 +19,13 @@ class Jugador{
       if(keyCode == LEFT){
         if(x>=0){ //si esta lejos del limite izquierdo puede moverse a la izquierda
           x -=2; 
+          frame=1;
         }
       }
       if(keyCode == RIGHT){
         if(x<=600){ //si está lejos del limite derecho de la pantalla puede moverse a la derecha
           x +=2;
+          frame=0;
         }
       }
       if(keyCode == UP){
@@ -34,7 +36,8 @@ class Jugador{
       }
       if(keyCode == DOWN){
         if(y<=600){ //si está lejos del limite inferior de la pantalla puede moverse hacia abajo
-          y +=2; 
+          y +=2;
+          frame=0;
         }
       }
     }
