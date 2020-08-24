@@ -3,7 +3,7 @@ class Boton{
   float ancho, alto;
   int r, g, b;
   String texto;
-  
+  boolean estado;
   
   Boton(float tempX, float tempY, float tempAncho, float tempAlto, String tempTexto){
     x=tempX;
@@ -14,18 +14,21 @@ class Boton{
     r=206;
     g=206;
     b=206;
-  ;  }
+    estado= false;
+  }
   
+  public boolean opcion(){
+    if(x<mouseX && x+ancho>mouseX && y<mouseY && y+alto>mouseY){//si el cursor esta en el boton reset
+      if(mousePressed && (mouseButton == LEFT)){//clic izquierdo y presionado
+        return true;
+      }
+    }
+    return false;
+  }
 
       
     
   void display(){
-    strokeWeight(1);
-    fill(r, g, b);
-    rect(x, y, ancho, alto);
-    fill(0);
-    textSize(30);
-    textAlign(CENTER);
-    text(texto, x+ancho/2, y+alto/2+5);
+    
   }
 }
