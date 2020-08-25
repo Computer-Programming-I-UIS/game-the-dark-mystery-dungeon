@@ -1,7 +1,7 @@
 The Dark mystery dungeon
 ================
 
-** La caverna oscura Vignory, la cual esta habitada por orcos, con un ambiente poco comun que no es de este mundo, en el cual la realidad esta alterada. Se adenta un joven aventurero que busca el misterio que se adentra en ella. **
+** La caverna oscura Vignory, la cual esta habitada por orcos, con un ambiente poco comun que no es de este mundo, en el cual la realidad esta alterada. Alli se adentra un joven aventurero que busca el misterio que se adentra en ella. **
 
 
 
