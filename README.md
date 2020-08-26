@@ -14,7 +14,7 @@ The Dark mystery dungeon
 
 ## CAPTURA
 
-![Screenshot](Pong/data/Dark.gif)
+![Screenshot](game-the-dark-mystery-dungeon/data/Dark.gif)
 
 
 ### CARACTERISTICAS
