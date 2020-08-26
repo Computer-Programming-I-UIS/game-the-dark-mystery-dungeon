@@ -17,7 +17,7 @@ class Boton{
     estado= false;
   }
   
-  public boolean opcion(){
+  public boolean opcion(){ //funcion que verifica cuando se haya hecho clic en una zona en especidfica
     if(x<mouseX && x+ancho>mouseX && y<mouseY && y+alto>mouseY){//si el cursor esta en el boton reset
       if(mousePressed && (mouseButton == LEFT)){//clic izquierdo y presionado
         return true;

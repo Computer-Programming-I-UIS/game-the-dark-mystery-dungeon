@@ -1,5 +1,4 @@
-class Objetos{
-  PImage []imagenes= new PImage[3];
+class Objetos{//en proceso
   float x;
   float y;
   int frame;
