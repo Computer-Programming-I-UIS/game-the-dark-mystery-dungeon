@@ -26,6 +26,9 @@ Este es un proyecto colaborativo hecho por un grupo de compañeros para la Unive
 
 ![Screenshot](The_dark_mystery_of_dungeon/data/Dark.gif)
 
+## REQUISITOS
+
+- Libreria Minim.
 
 ### CARACTERISTICAS
 ----
