@@ -1,4 +1,4 @@
-The Dark Mistery Dungeon
+The Dark Mystery Dungeon
 ================
 ![Banner (1)](https://user-images.githubusercontent.com/68113724/92610495-5d65ae00-f27d-11ea-96cc-eaa259a04286.png)
 
