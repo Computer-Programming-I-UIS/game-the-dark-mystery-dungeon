@@ -24,7 +24,7 @@ Este es un proyecto colaborativo hecho por un grupo de compañeros para la Unive
 
 ## Trailer
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=NxAKW2BVtTg&feature=emb_logo)
+[![IMAGE ALT TEXT HERE](https://i.ytimg.com/vi/NxAKW2BVtTg/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLB1dHFHZRV04LgdVXyKIInW6Znjnw)](https://www.youtube.com/watch?v=NxAKW2BVtTg&feature=emb_logo)
 
 ## REQUISITOS
 
