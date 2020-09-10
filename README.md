@@ -40,4 +40,4 @@ Este es un proyecto colaborativo hecho por un grupo de compañeros para la Unive
 ![5f576-everyone_10svg-215x300-967779887](https://user-images.githubusercontent.com/68113724/92610649-8dad4c80-f27d-11ea-80c4-4d76a3b55baa.png)
 
 
-**Qué les parece? Estamos atentos a cualquier recomendacion o sugerencia para siempre mejorar. Att: Gustavo y Luis.
+
