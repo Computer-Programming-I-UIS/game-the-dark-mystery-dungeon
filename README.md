@@ -39,5 +39,8 @@ Este es un proyecto colaborativo hecho por un grupo de compañeros para la Unive
 
 ![5f576-everyone_10svg-215x300-967779887](https://user-images.githubusercontent.com/68113724/92610649-8dad4c80-f27d-11ea-80c4-4d76a3b55baa.png)
 
+## CREDITOS
+- Patrick de Arteaga por la música
+https://patrickdearteaga.com/es/musica-libre-derechos-gratis/ link de su pg web para que la puedan revisar, tiene un material de musica muy interesante.
 
 
