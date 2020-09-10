@@ -47,6 +47,8 @@ class Jugador{
   
   void restart(){
     vida=100;
+    x=98;
+    y=272;
   }
     
   
@@ -123,7 +125,7 @@ class Jugador{
         }
       }
     }
-    //println(x+ "          "+ y+ "      "+ bloq); pruebas de posicion
+    println(frame); //pruebas de posicion
   }
   
   void atacar(){

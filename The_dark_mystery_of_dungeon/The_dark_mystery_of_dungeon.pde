@@ -1,4 +1,6 @@
 Jugador j1;
+
+//Enemigos
 Enemigo orco1;
 Enemigo orco2;
 Enemigo orco3;
@@ -14,6 +16,12 @@ Enemigo orco12;
 Enemigo orco13;
 Enemigo orco14;
 Enemigo orco15;
+//
+PFont fuente;
+import ddf.minim.*;
+Minim minim2;
+AudioPlayer Sonido1;
+
 int cont;
 Enemigo array[] = new Enemigo[15]; //array con todos los enemmigos
 Boton Creditos; //boton usado para los creditos y para siguiente
@@ -29,6 +37,10 @@ PImage []imagenes= new PImage[10];//array de fondos usados como el menu creditos
 
 void setup(){
   size(1200,700);
+  minim2 = new Minim(this);
+  Sonido1 = minim2.loadFile("Goliaths.mp3");
+  Sonido1.play();
+  
   j1= new Jugador(98, 272, 100);
   
   orco1= new Enemigo( 466, 272, 616, 272);
@@ -70,6 +82,30 @@ void setup(){
     imagenes[i]= loadImage(nombreImagen);
   }
 }
+void restart(){ //funcion para reiniciar el juego
+      j1.restart();
+      for(int i=0; i<12 ; i++){
+        array[i].restart();
+      }
+}
+
+void interfaz(){
+  fuente = loadFont("DialogInput.plain-48.vlw"); 
+  textFont(fuente);
+  image(imagenes[9], 1001, 300);
+  textSize(30);
+  textAlign(CENTER);
+  text(j1.getVida(),1100, 350);
+  text("Vidas", 1070, 270);
+  j1.display();
+  for(int i=0; i<4; i++){//for usado para dibujar los enemigos del array
+    array[i].display();
+  }
+}
+
+  
+//void matar(){
+  
 
 void draw(){
   if(menu==true){//siepre inicia con esta opcion la primera vez y cuando se da atras en creditos
@@ -109,23 +145,14 @@ void draw(){
   if(frame==4){// sala 1 juego
     background(0);
     image(imagenes[4], 0,0);
-    image(imagenes[9], 1001, 300);
-    textSize(30);
-    textAlign(CENTER);
-    text(j1.getVida(),1100, 350);
-    j1.display();
-    for(int i=0; i<4; i++){//for usado para dibujar los enemigos del array
-      array[i].display();
-    }
-    
+    interfaz();
     
     
     for(int i=0; i<4; i++){//enemigos atacando
-      if(j1.getX()==array[i].getX()+50){//cuando el enemigo esta a la izquierda
+      if(array[i].getX() <= j1.getX()+70 && j1.getX()+70 <= array[i].getX()+70){//cuando el enemigo esta a la izquierda
         if(array[i].getY()<=j1.getY() && j1.getY()<=array[i].getY()+50){
           if(array[i].getVida()==true){
-            if(cont<1){
-              j1.setVida();
+            if(cont<60){
               cont +=1;
             }
             if(j1.getFrame()==4){
@@ -137,8 +164,7 @@ void draw(){
       if(j1.getY()==array[i].getY()+50){ //cuando el enemigo esta arriba
         if(array[i].getX() <= j1.getX() && j1.getX() <= array[i].getX()+50){
           if(array[i].getVida()==true){
-            if(cont<1){
-              j1.setVida();
+            if(cont<60){
               cont +=1;
             }
             if(j1.getFrame()==8){
@@ -147,11 +173,10 @@ void draw(){
           }
         }
       }
-      if(j1.getX()+50==array[i].getX()){//cuando el enemigo esta a la derecha
+      if(array[i].getX() <= j1.getX()+50){//cuando el enemigo esta a la derecha
         if(array[i].getY() <= j1.getY() && j1.getY()<=array[i].getY() + 50){
           if(array[i].getVida()==true){
-              if(cont<1){
-                j1.setVida();
+              if(cont<60){
                 cont +=1;
               }
               if(j1.getFrame()==3){
@@ -160,29 +185,28 @@ void draw(){
             }
         }
       }
-      if(j1.getY()+50== array[i].getY()){//abajo
+      if(array[i].getY() <= j1.getY()+70 && j1.getY() <= array[i].getY()){//abajo
         if(array[i].getX() <= j1.getX() && j1.getX() <= array[i].getX()+50){
           if(array[i].getVida()==true){
-            if(cont<1){
-              j1.setVida();
+            if(cont<60){
               cont +=1;
             }
             if(j1.getFrame()==9){
-              array[i].setVida(false);
-              print("acierto");
+            }       array[i].setVida(false);
             }
           }
         }
       }
-      if(cont==1){//cuando ya se ha completado dicho chance se reinicia
+      if(cont>=60){//cuando ya se ha completado dicho chance se reinicia
         cont=0;
+        j1.setVida();
       }
     }
     
     if(j1.getVida()<=0){//cuando el jugador muere
       frame=8;
     }
-    
+  
     if(j1.getX()>=892){
         frame=5;
         j1.setPosicion(98,272);
@@ -277,7 +301,7 @@ void draw(){
         j1.setBloq(3);
       }
     }
-  }
+  
  
     
   if(frame==5){ // SALA 2
@@ -343,7 +367,6 @@ void draw(){
             }
             if(j1.getFrame()==9){
               array[i].setVida(false);
-              print("acierto");
             }
           }
         }
@@ -524,7 +547,6 @@ void draw(){
             }
             if(j1.getFrame()==9){
               array[i].setVida(false);
-              print("acierto");
             }
           }
         }
@@ -624,10 +646,7 @@ void draw(){
     if(keyPressed == true){//presionando cualquier tecla y cuando se esta en menu inicia el juego con la historia
       menu=true;
       frame=0;
-      j1.restart();
-      for(int i=0; i<12 ; i++){
-        array[i].restart();
-      }
+      restart();
     }
   }
   
@@ -636,14 +655,9 @@ void draw(){
    if(Restart.opcion()==true){//si se clickea en creditos se accede a ese fotograma
       menu=true;
       frame=0;
-      j1.restart();
-      for(int i=0; i<12 ; i++){
-        array[i].restart();
-      }
+      restart();
     }
   }
- 
-  print(frame);
   
   
 
