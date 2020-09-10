@@ -22,9 +22,9 @@ Este es un proyecto colaborativo hecho por un grupo de compañeros para la Unive
 - GUSTAVO DUARTE 
 - LUIS MARTINEZ
 
-## CAPTURA
+## Trailer
 
-![Screenshot](The_dark_mystery_of_dungeon/data/Dark.gif)
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=NxAKW2BVtTg&feature=emb_logo)
 
 ## REQUISITOS
 
