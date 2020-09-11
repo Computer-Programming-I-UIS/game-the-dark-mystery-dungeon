@@ -1,6 +1,6 @@
 The Dark Mystery Dungeon
 ================
-![Banner (1)](https://user-images.githubusercontent.com/68113724/92610495-5d65ae00-f27d-11ea-96cc-eaa259a04286.png)
+![Banner (2)](https://user-images.githubusercontent.com/68113724/92931880-c11ce200-f409-11ea-814e-96443719d2a3.png)
 
 Este es un proyecto colaborativo hecho por un grupo de compañeros para la Universidad Industrial de Santander.
 
